@@ -4,11 +4,13 @@
 <body>
   <ul>
     {% for name, item in items %}
-    <li><a href="/run/{{ name }}" target="_blank">{{ name }}</a></li>
+    <li><a href="/run/{{ name }}" target="logs">{{ name }}</a></li>
     {% else %}
       <li>This would display if the 'item' collection were empty</li>
     {% endfor %}
     
   </ul>
+
+  <iframe src="" name="logs" width="100%" height="400"></iframe>
 </body>
 </html>

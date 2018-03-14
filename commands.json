@@ -2,5 +2,9 @@
   "express demain proto": {
     "cwd": "/Users/ssavajols/Scripts/",
     "command": "sh xpr-demain.sh"
+  },
+  "express demain chat assets": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "command": "sh xpr-demain-update-demo-chat.sh"
   }
 }

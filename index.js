@@ -12,23 +12,21 @@ app.get('/', (req, res) => {
 
 app.get('/run/:command', (req, res) => {
 
-  console.log(req.params.command, commands, commands[req.params.command])
-
   const p = child(commands[req.params.command].command, [], {
     cwd: commands[req.params.command].cwd || process.cwd(),
     shell: true
   })
 
   p.stdout.on('data', (data) => {
-    res.send(data.toString());
+    res.write(data.toString());
   });
   
   p.stderr.on('data', (data) => {
-    res.send(data.toString());
+    res.write(data.toString());
   });
   
   p.on('exit', (code) => {
-    console.log(`Child exited with code ${code}`);
+    res.end(`Child exited with code ${code}`);
   });
 
 })

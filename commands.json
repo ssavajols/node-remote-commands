@@ -1,0 +1,6 @@
+{
+  "express demain proto": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "command": "sh xpr-demain.sh"
+  }
+}

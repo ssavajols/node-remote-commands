@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <ul>
+    {% for name, item in items %}
+    <li><a href="/run/{{ name }}" target="_blank">{{ name }}</a></li>
+    {% else %}
+      <li>This would display if the 'item' collection were empty</li>
+    {% endfor %}
+    
+  </ul>
+</body>
+</html>

@@ -38,7 +38,7 @@ app.get('/run/:command', (req, res) => {
   })
 
   cmd = commandRunning[req.params.command] = {
-    log: "running at " + (new Date).toString() + "<br />",
+    log: "started at " + (new Date).toString() + "<br />",
     isRunning: true
   }
 
@@ -52,7 +52,7 @@ app.get('/run/:command', (req, res) => {
   
   p.on('exit', (code) => {
     cmd.isRunning = false
-    cmd.log += "finished => " + code + "<br />"
+    cmd.log += "finished at " + (new Date).toString() + "<br />" + code + "<br />"
   });
 
 })

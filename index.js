@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
 
 app.get('/run/:command', (req, res) => {
 
+  res.write(Date.now())
+  
   const p = child(commands[req.params.command].command, [], {
     cwd: commands[req.params.command].cwd || process.cwd(),
     shell: true

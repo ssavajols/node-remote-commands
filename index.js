@@ -18,14 +18,17 @@ app.get('/run/:command', (req, res) => {
   })
 
   p.stdout.on('data', (data) => {
+    console.log(data.toString())
     res.write(data.toString());
   });
   
   p.stderr.on('data', (data) => {
+    console.log(data.toString())
     res.write(data.toString());
   });
   
   p.on('exit', (code) => {
+    console.log('exit', code)
     res.end(`Child exited with code ${code}`);
   });
 

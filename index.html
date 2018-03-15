@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-  <ul>
-    {% for name, item in items %}
-    <li><a href="/run/{{ name }}" target="logs">{{ name }}</a></li>
-    {% else %}
-      <li>This would display if the 'item' collection were empty</li>
-    {% endfor %}
-    
-  </ul>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      padding: 0 10px;
+    }
+    section {
+      float:left;
+      width: 50%;
+      border-right: 1px dashed #aaa;
+    }
+    .card-list {
+      display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    } 
+    .card {
+    display: inline-block;
+    margin:10px;
+    flex-grow: 1;
+    width: calc(100% * (1/4) - 10px - 1px)
+    } 
 
-  <iframe src="" name="logs" width="100%" height="400"></iframe>
+    iframe {
+      height: 100vh;
+      width: 95%;
+      margin: 2.5%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+      <h1>Process</h1>
+      <div class='card-list'>
+        {% for name, item in items %}
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{ item.image }}" alt="{{ name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{ item.description|safe }}</p>
+            <div class="btn-group text-right" role="group" aria-label="Basic example">
+              <a href="/run/{{ name }}" target="logs" class="btn btn-primary">Run</a>
+              <a href="/log/{{ name }}" target="logs" class="btn btn-primary">Log</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+  </section>
+
+  <section>
+    <h1>Logs</h1>
+    <iframe src="" name="logs" id="log-container"></iframe>
+  </section>
+  
+
 </body>
 </html>

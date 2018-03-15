@@ -1,10 +1,50 @@
 {
   "express demain proto": {
     "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/302/203",
+    "description": "Met à jour le styleguide et les proto <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://10.14.38.148:5000/styleguide/' target='_blank'>Styleguide</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/homepage.html' target='_blank'>Homepage</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/fil-info.html' target='_blank'>Fil info</a></li></ul>",
     "command": "sh xpr-demain.sh"
+  },
+  "express demain sonar": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/303/202",
+    "description": "Lance une analyse sonar <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://10.14.38.148:9000/' target='_blank'>Interface Sonar</a></li></ul>",
+    "command": "sh xpr-demain-sonar.sh"
   },
   "express demain chat assets": {
     "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/303/201",
+    "description": "Met à jour les assets de l'environnement chat <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.chat.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
     "command": "sh xpr-demain-update-demo-chat.sh"
+  },
+  "express demain chat XSL": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/301/203",
+    "description": "Met à jour les XSL de l'environnement chat <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.chat.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-chat-xsl.sh"
+  },
+  "express demain chat TWIG": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/302/202",
+    "description": "Met à jour les TWIG de l'environnement chat <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.chat.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-chat-twig.sh"
+  },
+  "express demain ed assets": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/302/201",
+    "description": "Met à jour les assets de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-ed.sh"
+  },
+  "express demain ed XSL": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/301/202",
+    "description": "Met à jour les XSL de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-ed-xsl.sh"
+  },
+  "express demain ed TWIG": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/301/201",
+    "description": "Met à jour les TWIG de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-ed-twig.sh"
   }
 }

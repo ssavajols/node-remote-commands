@@ -11,7 +11,7 @@ Logs: {{ log|safe }}
         willScrollToBottom = true
       } 
       console.log('writing', document.body.scrollTop, document.body.scrollHeight - document.body.clientHeight)
-      document.body.innerHTML += text
+      document.body.innerHTML == text
 
       if( willScrollToBottom ) {
         document.body.scrollTop = document.body.scrollHeight

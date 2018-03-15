@@ -39,7 +39,12 @@ app.get('/run/:command', (req, res) => {
 
   cmd = commandRunning[req.params.command] = {
     log: "started at " + (new Date).toString() + "<br />",
-    isRunning: true
+    isRunning: true,
+    timer: setTimeout(() => {
+      if( p ) {
+        p.kill()
+      }
+    }, 1000 * 60 * 10)
   }
 
   p.stdout.on('data', (data) => {

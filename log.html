@@ -1,6 +1,5 @@
 Logs: {{ log|safe }}
 
-
 <script>
   setInterval( () => {
     fetch(location.href)
@@ -10,8 +9,8 @@ Logs: {{ log|safe }}
       if( document.body.scrollTop == document.body.scrollHeight - document.body.clientHeight ) {
         willScrollToBottom = true
       } 
-      console.log('writing', document.body.scrollTop, document.body.scrollHeight - document.body.clientHeight)
-      document.body.innerHTML == text
+      console.log('writing', document.body.scrollTop, document.body.scrollHeight - document.body.clientHeight, text)
+      document.body.innerHTML = text
 
       if( willScrollToBottom ) {
         document.body.scrollTop = document.body.scrollHeight

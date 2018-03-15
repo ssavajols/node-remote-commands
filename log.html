@@ -2,7 +2,20 @@ Logs: {{ log|safe }}
 
 
 <script>
-  setTimeout(() => {
-    location.reload(true)
-  }, 1000 * 5)
+  setInterval( () => {
+    fetch(location.href)
+    .then(response => response.text())
+    .then(text => {
+      let willScrollToBottom = false
+      if( document.body.scrollTop == document.body.scrollHeight - document.body.clientHeight ) {
+        willScrollToBottom = true
+      } 
+      console.log('writing', document.body.scrollTop, document.body.scrollHeight - document.body.clientHeight)
+      document.body.innerHTML += text
+
+      if( willScrollToBottom ) {
+        document.body.scrollTop = document.body.scrollHeight
+      } 
+    })
+  }, 1000 * 3)
 </script>

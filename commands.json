@@ -1,13 +1,13 @@
 {
   "express demain proto": {
     "cwd": "/Users/ssavajols/Scripts/",
-    "image": "https://placekitten.com/302/203",
+    "image": "https://static.lexpress.fr/doc/images/chat/Spirou_in_snow.jpg",
     "description": "Met à jour le styleguide et les proto <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://10.14.38.148:5000/styleguide/' target='_blank'>Styleguide</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/homepage.html' target='_blank'>Homepage</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/fil-info.html' target='_blank'>Fil info</a></li></ul>",
     "command": "sh xpr-demain.sh"
   },
   "express demain sonar": {
     "cwd": "/Users/ssavajols/Scripts/",
-    "image": "https://placekitten.com/303/202",
+    "image": "https://static.lexpress.fr/doc/images/chat/mani.jpg",
     "description": "Lance une analyse sonar <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://10.14.38.148:9000/' target='_blank'>Interface Sonar</a></li></ul>",
     "command": "sh xpr-demain-sonar.sh"
   },
@@ -31,7 +31,7 @@
   },
   "express demain ed assets": {
     "cwd": "/Users/ssavajols/Scripts/",
-    "image": "https://placekitten.com/302/201",
+    "image": "https://static.lexpress.fr/doc/images/chat/fantasio_forest.jpg",
     "description": "Met à jour les assets de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
     "command": "sh xpr-demain-update-demo-ed.sh"
   },

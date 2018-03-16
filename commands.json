@@ -1,7 +1,7 @@
 {
   "express demain proto": {
     "cwd": "/Users/ssavajols/Scripts/",
-    "image": "https://placekitten.com/302/203",
+    "image": "https://static.lexpress.fr/doc/images/chat/Spirou_in_snow.jpg",
     "description": "Met à jour le styleguide et les proto <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://10.14.38.148:5000/styleguide/' target='_blank'>Styleguide</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/homepage.html' target='_blank'>Homepage</a></li><li class='list-group-item'><a href='http://10.14.38.148:5000/dist/pages/fil-info.html' target='_blank'>Fil info</a></li></ul>",
     "command": "sh xpr-demain.sh"
   },

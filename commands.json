@@ -46,5 +46,23 @@
     "image": "https://placekitten.com/301/201",
     "description": "Met à jour les TWIG de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
     "command": "sh xpr-demain-update-demo-ed-twig.sh"
+  },
+  "express demain piano assets": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://static.lexpress.fr/doc/images/chat/fantasio_forest.jpg",
+    "description": "Met à jour les assets de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-piano.sh"
+  },
+  "express demain piano XSL": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/301/202",
+    "description": "Met à jour les XSL de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-piano-xsl.sh"
+  },
+  "express demain piano TWIG": {
+    "cwd": "/Users/ssavajols/Scripts/",
+    "image": "https://placekitten.com/301/201",
+    "description": "Met à jour les TWIG de l'environnement ed <ul class='list-group list-group-flush'><li class='list-group-item'><a href='http://lexpress.fr.ed.cloud.ger.systems' target='_blank'>Démo</a></li></ul>",
+    "command": "sh xpr-demain-update-demo-piano-twig.sh"
   }
 }

@@ -54,6 +54,19 @@
     .btn-group {
       margin-right: 10px;
     }
+
+    .status-stopped {
+      background-color: rgba(255, 0, 0, 0.1)
+    }
+
+    .status-running {
+      background-color: rgba(0, 255, 0, 0.1)
+    }
+
+    .card-title span {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 11px;
+    }
   </style>
 </head>
 
@@ -64,8 +77,10 @@
       {% for item in items %}
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{ item.image }}" alt="{{ item.name }}">
-        <div class="card-body">
-          <h5 class="card-title">{{item.name}}</h5>
+        <div class="card-body status-{{item.status}}">
+          <h5 class="card-title">{{item.name}} -
+            <span>{{item.status}}</span>
+          </h5>
           <p class="card-text">{{ item.description|safe }}</p>
           <div class="btn-group text-right" role="group" aria-label="Basic example">
             {% if item.hasXSL %}

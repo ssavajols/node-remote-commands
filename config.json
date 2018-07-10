@@ -1,0 +1,9 @@
+{
+  "script_path": "/Users/ssavajols/Scripts/",
+  "html_demo_uri": "http://localhost:5000/demo-interface.html",
+  "scripts": {
+    "ASSETS": "./assets.sh",
+    "TWIG": "./twig.sh",
+    "XSL": "./xsl.sh"
+  }
+}

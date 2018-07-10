@@ -1,0 +1,378 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groupe LExpress & Amazon Web Services</title>
+          <link rel="stylesheet" href="/btstp/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/btstp/css/aws.css">
+      </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ec2/">GE & AWS</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/ec2/amis.html">AMIs</a></li>
+            <li><a href="/ec2/instances-demo.html">Instances de démo</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Groupe L'Express & Amazon Web Services</h1>
+        <p>Retrouvez sur cet espace, les informations nécessaires pour gérer vos démos sur AWS à l'aide du projet Infra As Code</p>
+        <p><a class="btn btn-primary btn-lg" href="http://gitlabhq.ger-multimedia.com/config/infrastructure-as-code" role="button">En savoir plus &raquo;</a></p>
+      </div>
+    </div>
+    
+    <div class="container">
+
+      <div class="row">
+             <h1>Liste des instances démo en cours</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+                <tr>
+                        <th>Nom</th>
+                        <th>Public IP</th>
+			<th>Private IP</th>
+			<th>Etat</th>
+			<th>Action</th>
+                </tr>
+				  <tr class="success">
+        	    <td>black</td>
+		    <td>34.254.217.185</td>
+		    <td>172.31.45.208</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-012fecfa8be6627af">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-012fecfa8be6627af">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>black-mongodb</td>
+		    <td>34.254.145.161</td>
+		    <td>172.31.44.166</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0621fbaf3b228b28f">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0621fbaf3b228b28f">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>black-ocari</td>
+		    <td>52.210.193.134</td>
+		    <td>172.31.34.103</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0505ac72d5078739f">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0505ac72d5078739f">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>black-site</td>
+		    <td>52.209.59.118</td>
+		    <td>172.31.44.17</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-08a49f6d961760313">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-08a49f6d961760313">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>black-xfactori</td>
+		    <td>52.214.249.100</td>
+		    <td>172.31.34.140</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0391c1253f433538a">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0391c1253f433538a">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>ch</td>
+		    <td>34.254.81.173</td>
+		    <td>172.31.47.75</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-08849d786bd1ab517">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-08849d786bd1ab517">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>ch-mongodb</td>
+		    <td>34.242.251.200</td>
+		    <td>172.31.38.32</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0655a17604f41a6fe">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0655a17604f41a6fe">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>ch-ocari</td>
+		    <td>34.251.240.158</td>
+		    <td>172.31.39.82</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-05b6ade03a5874c5d">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-05b6ade03a5874c5d">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>ch-site</td>
+		    <td>34.254.46.203</td>
+		    <td>172.31.34.48</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-08b3845c96440f821">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-08b3845c96440f821">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>ch-xfactori</td>
+		    <td>34.243.149.236</td>
+		    <td>172.31.37.205</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-000e8f9012e836f79">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-000e8f9012e836f79">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>iframely</td>
+		    <td>52.51.68.248</td>
+		    <td>172.31.33.159</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-583f93d5">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-583f93d5">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>new-mongodb-dev</td>
+		    <td>52.51.74.118</td>
+		    <td>172.31.32.82</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0e85f61e677b0e0b5">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0e85f61e677b0e0b5">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>pushweb-site</td>
+		    <td>54.194.164.187</td>
+		    <td>172.31.47.96</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-00ad84f8cf5257762">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-00ad84f8cf5257762">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>pushweb-xfactori</td>
+		    <td>54.77.107.195</td>
+		    <td>172.31.40.137</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-05ed0b29c9f0b39aa">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-05ed0b29c9f0b39aa">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>refonte_ocari</td>
+		    <td>52.214.6.6</td>
+		    <td>172.31.38.93</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-032a805790d3f296a">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-032a805790d3f296a">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>refonte_ocari-mongodb</td>
+		    <td>52.209.145.65</td>
+		    <td>172.31.43.186</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0c5d58f258932f70e">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0c5d58f258932f70e">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>refonte_ocari-ocari</td>
+		    <td>52.30.151.199</td>
+		    <td>172.31.35.142</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-092aa6763301340d9">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-092aa6763301340d9">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>refonte_ocari-site</td>
+		    <td>34.253.93.66</td>
+		    <td>172.31.38.25</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0317c467e850616c9">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0317c467e850616c9">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>refonte_ocari-xfactori</td>
+		    <td>52.210.137.138</td>
+		    <td>172.31.33.253</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-010e9658e95e18ee4">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-010e9658e95e18ee4">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>staging.ch</td>
+		    <td>52.50.233.229</td>
+		    <td>172.31.43.211</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0aeeea18aa1600771">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0aeeea18aa1600771">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>staging.ch-mongodb</td>
+		    <td>34.240.155.12</td>
+		    <td>172.31.34.248</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0c7297c19e4444073">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0c7297c19e4444073">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>staging.ch-ocari</td>
+		    <td>34.240.199.102</td>
+		    <td>172.31.41.185</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-09d65bcd2afca72cb">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-09d65bcd2afca72cb">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>staging.ch-site</td>
+		    <td>52.209.185.254</td>
+		    <td>172.31.32.187</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-09b802c2f6479750a">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-09b802c2f6479750a">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>staging.ch-xfactori</td>
+		    <td>52.211.245.37</td>
+		    <td>172.31.34.102</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-009c772435b2da421">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-009c772435b2da421">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>talend-crm-dev</td>
+		    <td>0.0.0.0</td>
+		    <td>172.31.43.174</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-025a47c11ba1d332e">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-025a47c11ba1d332e">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>team-workplace</td>
+		    <td>52.213.195.219</td>
+		    <td>172.31.46.223</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0c0d9907f37034e6f">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0c0d9907f37034e6f">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>testdeploy</td>
+		    <td>0.0.0.0</td>
+		    <td>172.31.35.202</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-18841b92">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-18841b92">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>testrabbit2</td>
+		    <td>0.0.0.0</td>
+		    <td>172.31.40.133</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-7b7e3bf1">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-7b7e3bf1">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>white</td>
+		    <td>34.243.230.106</td>
+		    <td>172.31.42.189</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0e761d2ef9e0e8a82">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0e761d2ef9e0e8a82">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>white-mongodb</td>
+		    <td>34.254.6.115</td>
+		    <td>172.31.44.206</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-02db13ac74af09ed1">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-02db13ac74af09ed1">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>white-ocari</td>
+		    <td>34.251.121.199</td>
+		    <td>172.31.37.201</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0c5c40231c02565b9">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0c5c40231c02565b9">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>white-site</td>
+		    <td>54.76.113.211</td>
+		    <td>172.31.39.0</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-03523ee715b3f602c">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-03523ee715b3f602c">Route53</a></td>
+		  </tr>
+	        		  <tr class="success">
+        	    <td>white-xfactori</td>
+		    <td>34.240.220.253</td>
+		    <td>172.31.40.211</td>
+		    <td>running</td>
+		    		    <td><a class="btn btn-danger stop-action" id="i-0ca5b5b7cbca68f3a">Stop</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0ca5b5b7cbca68f3a">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>windows-push</td>
+		    <td>54.154.133.144</td>
+		    <td>172.31.40.106</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-01b83de2332fbecac">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-01b83de2332fbecac">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>windows-push-mongodb</td>
+		    <td>52.213.131.94</td>
+		    <td>172.31.39.75</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0052452b28d4a6b07">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0052452b28d4a6b07">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>windows-push-ocari</td>
+		    <td>52.209.94.216</td>
+		    <td>172.31.32.148</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0602c4a496b4f8d0a">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0602c4a496b4f8d0a">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>windows-push-site</td>
+		    <td>52.16.189.253</td>
+		    <td>172.31.37.78</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0a01cc7ab30773e86">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0a01cc7ab30773e86">Route53</a></td>
+		  </tr>
+	        		  <tr class="danger">
+        	    <td>windows-push-xfactori</td>
+		    <td>52.17.104.1</td>
+		    <td>172.31.47.210</td>
+		    <td>stopped</td>
+		    		    <td><a class="btn btn-success start-action" id="i-0ec2d255352e5fe99">Start</a></td>
+		    		    <td><a class="btn btn-success action-route53" id="i-0ec2d255352e5fe99">Route53</a></td>
+		  </tr>
+	                </table>
+    </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2017 GE Exploitation.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/btstp/js/bootstrap.min.js"></script>
+    <script src="/btstp/js/aws.js"></script>
+  </body>
+</html>

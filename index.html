@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
     }
+
     .fixed {
       position: fixed;
       left: 50%;
-    } 
+    }
 
-    .card-img-top { 
+    .card-img-top {
       width: 100%;
       max-height: 200px;
       object-fit: cover;
@@ -21,56 +25,80 @@
     h1 {
       padding: 0 10px;
     }
+
     section {
-      float:left;
+      float: left;
       width: 50%;
       border-right: 1px dashed #aaa;
     }
+
     .card-list {
       display: flex;
-    flex-wrap:wrap;
-    width: 100%;
-    } 
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     .card {
-    display: inline-block;
-    margin:10px;
-    flex-grow: 1;
-    width: calc(100% * (1/4) - 10px - 1px)
-    } 
+      display: inline-block;
+      margin: 10px;
+      flex-grow: 1;
+      width: calc(100% * (1/4) - 10px - 1px)
+    }
 
     iframe {
       height: 80vh;
       width: 95%;
       margin: 2.5%;
     }
+
+    .btn-group {
+      margin-right: 10px;
+    }
   </style>
 </head>
+
 <body>
   <section>
-      <h1>Process</h1>
-      <div class='card-list'>
-        {% for name, item in items %}
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{ item.image }}" alt="{{ name }}">
-          <div class="card-body">
-            <h5 class="card-title">{{name}}</h5>
-            <p class="card-text">{{ item.description|safe }}</p>
-            <div class="btn-group text-right" role="group" aria-label="Basic example">
-              <a href="/run/{{ name }}" target="logs" class="btn btn-primary">Run</a>
-              <a href="/log/{{ name }}" target="logs" class="btn btn-primary">Log</a>
+    <h1>Process</h1>
+    <div class='card-list'>
+      {% for item in items %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ item.image }}" alt="{{ item.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{ item.description|safe }}</p>
+          <div class="btn-group text-right" role="group" aria-label="Basic example">
+            {% if item.hasXSL %}
+            <div class="btn-group">
+              <a href="/run/XSL/{{ item.name }}" target="logs" class="btn btn-primary">XSL</a>
+              <a href="/log/XSL/{{ item.name }}" target="logs" class="btn btn-primary">Log</a>
             </div>
+            {% endif %} {% if item.hasTWIG %}
+            <div class="btn-group">
+              <a href="/run/TWIG/{{ item.name }}" target="logs" class="btn btn-primary">TWIG</a>
+              <a href="/log/TWIG/{{ item.name }}" target="logs" class="btn btn-primary">Log</a>
+            </div>
+            {% endif %} {% if item.hasASSETS %}
+            <div class="btn-group">
+              <a href="/run/ASSETS/{{ item.name }}" target="logs" class="btn btn-primary">ASSETS</a>
+              <a href="/log/ASSETS/{{ item.name }}" target="logs" class="btn btn-primary">Log</a>
+            </div>
+            {% endif %}
+
           </div>
         </div>
-        {% endfor %}
-        
       </div>
+      {% endfor %}
+
+    </div>
   </section>
 
   <section class="fixed">
     <h1>Logs</h1>
     <iframe src="" name="logs" id="log-container"></iframe>
   </section>
-  
+
 
 </body>
+
 </html>
